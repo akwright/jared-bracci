@@ -30,5 +30,11 @@
 <?php // <body> closes in footer.php ?>
 
 
+<header class="site__header" role="header">
+	<a class="site__logo" href="<?php echo get_home_url(); ?>">
+		<?php echo get_bloginfo(); ?>
+	</a>
+	<?php JAREDBRACCI_Menu::nav_menu( 'primary' ); ?>
+</header>
 
-<?php // common header content goes here ?>
+<main class="site__content">

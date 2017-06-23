@@ -8,11 +8,11 @@
 
 
 /**
- * Class MOZ_Html
+ * class JAREDBRACCI_Html
  *
  *
  */
-class MOZ_Html {
+class JAREDBRACCI_Html {
 
 
 	/**

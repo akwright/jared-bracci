@@ -10,10 +10,10 @@
 
 
 /**
- * Class MOZ_Menu
+ * class JAREDBRACCI_Menu
  *
  */
-class MOZ_Menu {
+class JAREDBRACCI_Menu {
 
 
 	/**
@@ -66,7 +66,7 @@ class MOZ_Menu {
 			'show_level_class' => $show_level_class,
 			'items_wrap'       => "<ul class=\"{$wrap_class}\">%3\$s</ul>",
 			'fallback_cb'      => false,
-			'walker'           => new MOZ_Walker_Nav_Menu
+			'walker'           => new JAREDBRACCI_Walker_Nav_Menu
 		), $extras ) );
 	}
 

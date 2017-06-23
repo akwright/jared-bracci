@@ -35,7 +35,7 @@
 				<?php get_template_part( 'elements/github' ); ?>
 
 				<div class="hero__icon">
-					<?php MOZ_SVG::svg( 'medal' ); ?>
+					<?php JAREDBRACCI_SVG::svg( 'medal' ); ?>
 				</div>
 
 				<div class="hero__credits">

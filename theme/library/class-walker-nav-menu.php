@@ -14,7 +14,7 @@ defined( 'ABSPATH' ) or die();
 
 
 /**
- * Class MOZ_Walker_Nav_Menu
+ * class JAREDBRACCI_Walker_Nav_Menu
  *
  * Prints the Html for the multi tier navigation
  * menus
@@ -23,7 +23,7 @@ defined( 'ABSPATH' ) or die();
  *
  * @uses  Walker_Nav_Menu
  */
-class MOZ_Walker_Nav_Menu extends Walker_Nav_Menu {
+class JAREDBRACCI_Walker_Nav_Menu extends Walker_Nav_Menu {
 
 
 
@@ -49,7 +49,7 @@ class MOZ_Walker_Nav_Menu extends Walker_Nav_Menu {
 		}
 
 		// BEM-ify the given sub classes
-		$list_classes_str = MOZ_BEM::get_bem( $args->menu_class, $list_classes );
+		$list_classes_str = JAREDBRACCI_BEM::get_bem( $args->menu_class, $list_classes );
 
 		$output .= "<ul class=\"$list_classes_str\">";
 	}
@@ -90,7 +90,7 @@ class MOZ_Walker_Nav_Menu extends Walker_Nav_Menu {
 		}
 
 		// BEM-ify the given sub classes
-		$item_classes_str = MOZ_BEM::get_bem( $args->menu_class, $item_classes );
+		$item_classes_str = JAREDBRACCI_BEM::get_bem( $args->menu_class, $item_classes );
 
 		if ( isset( $item->classes[0] ) && ! empty( $item->classes[0] ) ) {
 			// the first item in the 'classes' array is the user-set class
@@ -121,7 +121,7 @@ class MOZ_Walker_Nav_Menu extends Walker_Nav_Menu {
 		                . $args->link_after;
 
 		$output .= $args->before;
-		$output .= MOZ_Html::get_element( $tag, $attrs, $link_content );
+		$output .= JAREDBRACCI_Html::get_element( $tag, $attrs, $link_content );
 		$output .= $args->after;
 	}
 

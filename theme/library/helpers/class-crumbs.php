@@ -9,10 +9,10 @@
 
 
 /**
- * Class MOZ_Crumbs
+ * class JAREDBRACCI_Crumbs
  *
  */
-class MOZ_Crumbs {
+class JAREDBRACCI_Crumbs {
 
 
 	/**
@@ -65,7 +65,7 @@ class MOZ_Crumbs {
 								$attrs['href'] = $item['link'];
 							}
 
-							MOZ_Html::element( $tag, $attrs, $item['text'] );
+							JAREDBRACCI_Html::element( $tag, $attrs, $item['text'] );
 						?>
 					</li>
 
@@ -96,7 +96,7 @@ class MOZ_Crumbs {
 		$current_item = self::get_current_crumb_item();
 		$crumbs       = array( $current_item );
 
-		if ( $current_item['id'] && ( $parents = MOZ_Menu::get_parent_menu_items( $theme_location, $current_item['id'] ) ) ) {
+		if ( $current_item['id'] && ( $parents = JAREDBRACCI_Menu::get_parent_menu_items( $theme_location, $current_item['id'] ) ) ) {
 			$crumbs = array_merge( self::menu_items_to_crumbs( $parents ), $crumbs );
 		}
 
@@ -106,7 +106,7 @@ class MOZ_Crumbs {
 			) ) );
 		}
 
-		return apply_filters( 'moz_crumbs_array', $crumbs, $theme_location, $options );
+		return apply_filters( 'JAREDBRACCI_crumbs_array', $crumbs, $theme_location, $options );
 	}
 
 

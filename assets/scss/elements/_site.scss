@@ -8,3 +8,48 @@
 	padding: 0;
 	height: 100%;
 }
+
+.site__body {
+  font-family: $t_font_body;
+  font-size: $t_size_base;
+}
+
+  .site__content {
+    height: 100%;
+    position: relative;
+  }
+    .site__background {
+      display: flex;
+
+      position: fixed;
+      top: 0; left: 0;
+      height: 100%;
+      width: 100%;
+
+      background-color: $c_black;
+      z-index: -1;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+
+        background-image: linear-gradient($c_purple_gradient_start, $c_purple_gradient_end);
+        opacity: .7;
+      }
+
+      img {
+        object-fit: cover;
+      }
+    }
+
+h1, h2, h3 {
+  font-family: $t_font_display;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: $t_size_base * 3.125;
+}

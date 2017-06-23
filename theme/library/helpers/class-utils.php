@@ -8,10 +8,10 @@
 
 
 /**
- * Class MOZ_Utils
+ * class JAREDBRACCI_Utils
  *
  */
-class MOZ_Utils {
+class JAREDBRACCI_Utils {
 	/**
 	 * Return an escaped email
 	 * string to be used with

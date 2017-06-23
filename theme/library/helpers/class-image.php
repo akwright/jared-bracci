@@ -9,10 +9,10 @@
 
 
 /**
- * Class MOZ_Image
+ * class JAREDBRACCI_Image
  *
  */
-class MOZ_Image {
+class JAREDBRACCI_Image {
 
 
 	/**
@@ -173,7 +173,7 @@ class MOZ_Image {
 		$alt = $bgel_attrs['alt'];
 		unset( $bgel_attrs['alt'] );
 
-		$content = MOZ_Html::get_element( 'span', array( 'class' => 'visuallyhidden' ), $alt );
+		$content = JAREDBRACCI_Html::get_element( 'span', array( 'class' => 'visuallyhidden' ), $alt );
 
 		$bgel_attrs['class'] .= ' moz-background-picture';
 
@@ -217,7 +217,7 @@ class MOZ_Image {
 			$content .= ob_get_clean();
 		}
 
-		return MOZ_Html::get_element( 'span', $bgel_attrs, $content );
+		return JAREDBRACCI_Html::get_element( 'span', $bgel_attrs, $content );
 	}
 
 
@@ -266,7 +266,7 @@ class MOZ_Image {
 				'type'   => esc_attr( get_post_mime_type( $image ) )
 			), false, false );
 
-			$content[] = MOZ_Html::get_sc_element( 'source', $source_attrs );
+			$content[] = JAREDBRACCI_Html::get_sc_element( 'source', $source_attrs );
 		}
 
 		$content[] = '<!--[if IE 9]></video><![endif]-->';
@@ -276,9 +276,9 @@ class MOZ_Image {
 			'alt'    => self::get_img_alt( $image )
 		), (array) $attrs ) );
 
-		$content[] = MOZ_Html::get_sc_element( 'img', $img_attrs );
+		$content[] = JAREDBRACCI_Html::get_sc_element( 'img', $img_attrs );
 
-		return MOZ_Html::get_element( 'picture', null, implode( '', $content ) );
+		return JAREDBRACCI_Html::get_element( 'picture', null, implode( '', $content ) );
 	}
 
 
@@ -331,7 +331,7 @@ class MOZ_Image {
 			'alt'    => self::get_img_alt( $image )
 		), (array) $attrs ) );
 
-		return MOZ_Html::get_sc_element( 'img', $img_attrs );
+		return JAREDBRACCI_Html::get_sc_element( 'img', $img_attrs );
 	}
 
 

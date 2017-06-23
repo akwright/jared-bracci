@@ -8,10 +8,10 @@
 
 
 /**
- * Class MOZ_BEM
+ * class JAREDBRACCI_BEM
  *
  */
-class MOZ_BEM {
+class JAREDBRACCI_BEM {
 
 
 	/**

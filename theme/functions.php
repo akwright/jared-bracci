@@ -52,26 +52,23 @@ if ( ! function_exists( 'theme_setup' ) ) {
 
 
 		// Let wp know we want to use post thumbnails
-		/*
 		add_theme_support( 'post-thumbnails' );
-		*/
 		
 		// Add Custom Logo Support.
-		/*
-		add_theme_support( 'custom-logo', array(
-			'width'       => 181, // Example Width Size
-			'height'      => 42,  // Example Height Size
-			'flex-width'  => true,
-		) );
-		*/
+		
+		// add_theme_support( 'custom-logo', array(
+		// 	'width'       => 181, // Example Width Size
+		// 	'height'      => 42,  // Example Height Size
+		// 	'flex-width'  => true,
+		// ) );
+		
 
 		// Register navigation menus for theme
-		/*
+		
 		register_nav_menus( array(
-			'primary' => 'Main Menu',
-			'footer'  => 'Footer Menu'
+			'primary' => 'Main Menu'
 		) );
-		*/
+		
 
 
 		// Let wp know we are going to handle styling galleries

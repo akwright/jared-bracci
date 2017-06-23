@@ -8,10 +8,10 @@
 
 
 /**
- * Class MOZ_Link
+ * class JAREDBRACCI_Link
  *
  */
-class MOZ_Link {
+class JAREDBRACCI_Link {
 
 
 	/**
@@ -40,8 +40,8 @@ class MOZ_Link {
 		$href = $data[$data['type']];
 
 		switch ( $data['type'] ) {
-			case 'tel': return 'tel:' . MOZ_Utils::get_esc_tel( $href );
-			case 'email': return 'mailto:' . MOZ_Utils::get_esc_email( $href );
+			case 'tel': return 'tel:' . JAREDBRACCI_Utils::get_esc_tel( $href );
+			case 'email': return 'mailto:' . JAREDBRACCI_Utils::get_esc_email( $href );
 			default: return $href;
 		}
 	}
@@ -128,7 +128,7 @@ class MOZ_Link {
 			$attrs['href'] = $href;
 		}
 
-		return MOZ_Html::get_element( 'a', self::add_link_target( $attrs ), $content );
+		return JAREDBRACCI_Html::get_element( 'a', self::add_link_target( $attrs ), $content );
 	}
 
 

@@ -6,7 +6,7 @@
  */
 ?>
 
-
+</main>
 <?php // common footer content goes here ?>
 
 

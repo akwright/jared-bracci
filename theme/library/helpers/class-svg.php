@@ -8,9 +8,9 @@
 
 
 /**
- * Class MOZ_SVG
+ * class JAREDBRACCI_SVG
  */
-class MOZ_SVG {
+class JAREDBRACCI_SVG {
 
 
 	/**
@@ -57,7 +57,7 @@ class MOZ_SVG {
 		$default_attrs = $alt ? array( 'role' => 'img' ) : array( 'aria-hidden' => 'true' );
 		$final_attrs   = array_merge( $default_attrs, $attrs );
 
-		$content = MOZ_Html::get_element( 'use', array(
+		$content = JAREDBRACCI_Html::get_element( 'use', array(
 			'xmlns:xlink' => 'http://www.w3.org/1999/xlink',
 			'xlink:href'  => "#icon-$icon"
 		) );
@@ -66,7 +66,7 @@ class MOZ_SVG {
 			$content = "<title>$alt</title>" . $content;
 		}
 
-		return MOZ_Html::get_element( 'svg', $final_attrs, $content );
+		return JAREDBRACCI_Html::get_element( 'svg', $final_attrs, $content );
 	}
 
 

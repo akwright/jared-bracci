@@ -11,7 +11,7 @@ within the includes directory.** This will allow you to easily pull in updates t
 part of the mozaik-theme-starter.
 
 An autoloader for the library is registered in `library-loader.php` that matches classes
-starting with `MOZ_` and is included by default in the provided `theme_setup` function in 
+starting with `JAREDBRACCI_` and is included by default in the provided `theme_setup` function in 
 the theme's `functions.php`.
 
 All methods of the classes in the library are _static_ methods. This plus the aforementioned
@@ -19,13 +19,13 @@ autoloader mean that using a method from one of the library's classes is as easy
 examples:
 
 ```php
-MOZ_Utils::get_upper( 'Ευχαριστώ' ); // => EΥΧΑΡΙΣΤΩ (notice no accents on uppercase)
+JAREDBRACCI_Utils::get_upper( 'Ευχαριστώ' ); // => EΥΧΑΡΙΣΤΩ (notice no accents on uppercase)
 ```
 
 Using the custom nav walker (to print a WP menu with less cruft) can also be as simple as:
 
 ```php
-MOZ_Menu::nav_menu( 'primary' );
+JAREDBRACCI_Menu::nav_menu( 'primary' );
 ```
 
 Which is roughly equivalent to the following:
@@ -37,20 +37,20 @@ wp_nav_menu( array(
 	'container_class' => 'menu menu--primary',
 	'items_wrap'      => '<ul class="menu__list">%3$s</ul>',
 	'fallback_cb'     => false,
-	'walker'          => new MOZ_Walker_Nav_Menu
+	'walker'          => new JAREDBRACCI_Walker_Nav_Menu
 ) );
 ```
 
 ## Responsive Images
 
-The `MOZ_Image` class offers a number of public static methods to help using responsive and even 
+The `JAREDBRACCI_Image` class offers a number of public static methods to help using responsive and even 
 lazy-loaded images in your custom WordPress theme:
 
 Given the image's attachment id,
 
-- `MOZ_Image::background` prints a responsive background image
-- `MOZ_Image::picture` prints a responsive image using a picture element
-- `MOZ_Image::image` prints a responsive image using srcset-sizes
+- `JAREDBRACCI_Image::background` prints a responsive background image
+- `JAREDBRACCI_Image::picture` prints a responsive image using a picture element
+- `JAREDBRACCI_Image::image` prints a responsive image using srcset-sizes
 
 The responsive images implementation is based on the responsive images specification as it is
 being implemented in browsers and is supported/polyfilled in non-supporting browsers using
@@ -66,12 +66,12 @@ For a full set of example implementations as well as a bit of information on bro
 
 ## SVG
 
-The `MOZ_SVG` class has a few very simple static methods to help working with SVG in your theme.
+The `JAREDBRACCI_SVG` class has a few very simple static methods to help working with SVG in your theme.
 
 To print an svg from within your `assets` folder (eg: `assets/svg/medal.svg`) simply use:
 
 ```php
-MOZ_SVG::svg( 'medal' );
+JAREDBRACCI_SVG::svg( 'medal' );
 ```
 
 The `::get_icon()`/`::icon()` are helpers for printing the necessary markup when using _SVG sprites_.
@@ -81,7 +81,7 @@ The `::get_icon()`/`::icon()` are helpers for printing the necessary markup when
    href="http://facebook.com/example-page"
    target="_blank"
    rel="nofollow">
-	<?php MOZ_SVG::icon( 'facebook' ); ?>
+	<?php JAREDBRACCI_SVG::icon( 'facebook' ); ?>
 </a>
 ```
 
@@ -94,12 +94,12 @@ The `::get_icon()`/`::icon()` are helpers for printing the necessary markup when
 
 ## Pagination
 
-`MOZ_Pagination` supports printing custom pagination for normal as well as custom WordPress Loops:
+`JAREDBRACCI_Pagination` supports printing custom pagination for normal as well as custom WordPress Loops:
 
 For normal loops it can be as simple as:
 
 ```php
-MOZ_Pagination::pagination();  
+JAREDBRACCI_Pagination::pagination();  
 ```
 
 For custom loops all you need to do is pass in the `max_num_pages` query property
@@ -123,7 +123,7 @@ if ( $football_query->have_posts() ) :
 	endwhile;
 
 	// print pagination
-	MOZ_Pagination::pagination( array( 
+	JAREDBRACCI_Pagination::pagination( array( 
 		'total' => $football_query->max_num_pages 
 	) );
 
@@ -139,44 +139,44 @@ wp_reset_postdata();
 
 ## Menu
 
-`MOZ_Menu` contains a simple helper to make using the BEM custom nav walker a little
+`JAREDBRACCI_Menu` contains a simple helper to make using the BEM custom nav walker a little
 easier. As mentioned above, just do the following to print a custom nav menu:
 
 ```php
-MOZ_Menu::nav_menu( 'primary' );
+JAREDBRACCI_Menu::nav_menu( 'primary' );
 ```
 
 You can also use the menu walker to print a sitemap based on a WP nav menu:
 
 ```php
-MOZ_Menu::nav_menu( 'sitemap', array(
+JAREDBRACCI_Menu::nav_menu( 'sitemap', array(
 	'menu_class' => 'sitemap'
 ) );
 ```
 
 ## Crumbs (Breadcrumbs)
 
-`MOZ_Crumbs` is a simple wp nav menu based breadcrumbs implementation that does not
+`JAREDBRACCI_Crumbs` is a simple wp nav menu based breadcrumbs implementation that does not
 use a nav menu walker to be printed.
 
 Printing breadcrumbs based on a given nav menu can be as simple as:
 
 ```php
-MOZ_Crumbs::crumbs( 'primary' );
+JAREDBRACCI_Crumbs::crumbs( 'primary' );
 ```
 
 ## Utils
 
-The `MOZ_Utils` class holds a few miscellaneous utility methods to make certain things easier.
+The `JAREDBRACCI_Utils` class holds a few miscellaneous utility methods to make certain things easier.
 
-`MOZ_Utils::get_upper( 'string' )` returns the given string in uppercase with all accents removed.
+`JAREDBRACCI_Utils::get_upper( 'string' )` returns the given string in uppercase with all accents removed.
  
-`MOZ_Utils::get_copyright_years( 2014 )` returns a string like '2014-2015' representing a year range
+`JAREDBRACCI_Utils::get_copyright_years( 2014 )` returns a string like '2014-2015' representing a year range
 between the given year and the current year.
 
 ## Link
 
-`MOZ_Link` contains a few methods to make it easier to work with links in WordPress.
+`JAREDBRACCI_Link` contains a few methods to make it easier to work with links in WordPress.
 
 For instance, to print a link where your `$link_data` comes from data entry and you
 want to intelligently add things like `rel="nofollow"` to the link depending if it is
@@ -194,7 +194,7 @@ $link_data = array(
   'external' => ''
 );
 
-MOZ_Link::link( $link_data, array(
+JAREDBRACCI_Link::link( $link_data, array(
   'class' => 'button--big',
-), MOZ_Utils::get_upper( ') )
+), JAREDBRACCI_Utils::get_upper( ') )
 ```
