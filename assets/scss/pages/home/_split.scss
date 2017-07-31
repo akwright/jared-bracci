@@ -1,0 +1,60 @@
+.split {
+  position: relative;
+  flex: 1 1 50%;
+
+  &-bgimage {
+    display: flex;
+
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+
+    background-color: $c_black;
+    z-index: -1;
+
+    img { object-fit: cover; }
+  }
+
+  &-content {
+    height: 100%;
+    position: relative;
+  }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+
+      .split--left  & { align-items: flex-start; }
+      .split--right & { align-items: flex-end; }
+
+      font-size: $t_size_base * 3.125;
+      line-height: 1.2;
+
+      span {
+        @include padding(horizontal, 1rem);
+
+        display: inline-block;
+        color: $c_white;
+
+        &:first-child {
+          .split--left &  { background-color: $c_gold; }
+          .split--right & { background-color: $c_black; }
+        }
+        &:last-child {
+          .split--left &  { background-color: $c_black; }
+          .split--right & { background-color: $c_red; }
+        }
+      }
+    }
+
+    &-tagline {
+      position: absolute;
+      bottom: 2rem;
+
+      color: $c_white;
+
+      .split--left & { left: 2rem; }
+      .split--right & { right: 2rem; text-align: right; }
+    }
+}

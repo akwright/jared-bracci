@@ -2,53 +2,42 @@
 /**
  * Template Name: Home
  */
-
-$show_main_button = get_field( 'show_main_button' );
-$show_extra_link  = get_field( 'show_extra_link' );
-
 ?>
 
 <?php get_header(); ?>
 
-  <figure class="site__background">
-    <img src="<?php echo get_field( 'page_background' ); ?>" alt="Homepage background">
-  </figure>
+  <section class="split  split--left">
+    <figure class="split-bgimage">
+      <img src="<?php echo get_field( 'left_background_image' ); ?>" alt="Left split background">
+    </figure>
 
-  <article class="home">
+    <article class="split-content">
+      <h2 class="split-title">
+        <span><?php echo get_field( 'left_title_start' ); ?></span>
+        <span><?php echo get_field( 'left_title_end' ); ?></span>
+      </h2>
 
-    <header>
-      <h1 class="home__title">
-        <?php
-          if ( the_field( 'title' ) ) {
-            echo get_field( 'title' );
-          }
-        ?>
-      </h1>
-    </header>
+      <p class="split-tagline"><?php echo get_field( 'left_text' ); ?></p>
 
-    <p class="home__content">
-      <?php
-        if ( the_field( 'content' ) ) {
-          echo get_field( 'content' );
-        }
-      ?>
-    </p>
+      <a class="split-button  button" href="<?php echo home_url(); ?>/music/unplugged/">Listen Now</a>
+    </article>
+  </section>
 
-    <footer class="home__footer">
-      <?php if ( $show_main_button ) : ?>
-        <a class="home__cta"
-           href="<?php echo get_field( 'main_button_link' ); ?>">
-          <?php echo get_field( 'main_button_text' ); ?>
-        </a>
-      <?php endif; ?>
-      <?php if ( $show_extra_link ) : ?>
-        <span><?php echo get_field( 'extra_link_separator_text' ); ?></span>
-        <a href="<?php echo get_field( 'extra_link_page' ); ?>">
-          <?php echo get_field( 'extra_link_text' ); ?>
-        </a>
-      <?php endif; ?>
-    </footer>
+  <section class="split  split--right">
+    <figure class="split-bgimage">
+      <img src="<?php echo get_field( 'right_background_image' ); ?>" alt="Right split background">
+    </figure>
 
-  </article>
+    <article class="split-content">
+      <h2 class="split-title">
+        <span><?php echo get_field( 'right_title_start' ); ?></span>
+        <span><?php echo get_field( 'right_title_end' ); ?></span>
+      </h2>
+
+      <p class="split-tagline"><?php echo get_field( 'right_text' ); ?></p>
+
+      <a class="split-button  button" href="<?php echo home_url(); ?>/music/ampedup/">Listen Now</a>
+    </article>
+  </section>
 
 <?php get_footer(); ?>

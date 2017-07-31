@@ -1,5 +1,17 @@
-.site__header {
+.site-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+
   position: absolute;
   top: 0; left: 0;
   width: 100%;
+
+  padding: 1rem;
+  z-index: 1;
 }
+  .site-logo {
+    color: $c_white;
+    text-decoration: none;
+  }

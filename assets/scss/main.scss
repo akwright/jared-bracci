@@ -20,6 +20,7 @@
 
 @import "helpers/mixins/rem";
 @import "helpers/mixins/bp";
+@import "helpers/mixins/padding";
 
 // styling utilities
 @import "helpers/mixins/fit";
@@ -65,3 +66,7 @@
  */
 @import "elements/site";
 @import "elements/header";
+@import "elements/menu";
+
+@import "pages/home/base";
+@import "pages/home/split";

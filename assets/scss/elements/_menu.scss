@@ -1,0 +1,21 @@
+.menu {
+  color: $c_white;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 2rem;
+
+    &:last-child { margin-right: 0; }
+  }
+
+  &__link {
+    color: currentColor;
+    text-decoration: none;
+    text-shadow: 0 4px 8px rgba($c_black, .2);
+  }
+}

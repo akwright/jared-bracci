@@ -26,15 +26,15 @@
 
 	<?php wp_head(); ?>
 </head>
-<body class="site__body">
+<body <?php body_class( 'site-body' ); ?>>
 <?php // <body> closes in footer.php ?>
 
 
-<header class="site__header" role="header">
-	<a class="site__logo" href="<?php echo get_home_url(); ?>">
+<header class="site-header" role="header">
+	<a class="site-logo" href="<?php echo get_home_url(); ?>">
 		<?php echo get_bloginfo(); ?>
 	</a>
 	<?php JAREDBRACCI_Menu::nav_menu( 'primary' ); ?>
 </header>
 
-<main class="site__content">
+<main class="site-content">
