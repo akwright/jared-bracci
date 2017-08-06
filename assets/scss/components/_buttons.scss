@@ -1,0 +1,21 @@
+.button {
+  padding: 1rem 2.5rem;
+
+  border-radius: $g_radius_pill;
+  font-size: 110%;
+  text-decoration: none;
+  transition: transform .2s $g_easing;
+
+  &:hover,
+  &:focus  { transform: scale(1.05); }
+  &:active { transform: scale(.95); }
+
+  &--white {
+    background-color: $c_white;
+    color: $c_black;
+  }
+
+  &--shadow {
+    box-shadow: 0 13px 23px rgba($c_black, .2);
+  }
+}

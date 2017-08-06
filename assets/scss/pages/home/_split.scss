@@ -1,5 +1,7 @@
 .split {
   position: relative;
+  display: flex;
+  flex-direction: column;
   flex: 1 1 50%;
 
   &-bgimage {
@@ -17,44 +19,66 @@
   }
 
   &-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     height: 100%;
     position: relative;
+
+    .split--left &  { align-items: flex-start; }
+    .split--right & { align-items: flex-end; }
   }
 
     &-title {
       display: flex;
       flex-direction: column;
 
-      .split--left  & { align-items: flex-start; }
-      .split--right & { align-items: flex-end; }
+      .split--left  & {
+        align-items: flex-start;
+        padding-left: $g_gutter;
+      }
+      .split--right & {
+        align-items: flex-end;
+        padding-right: $g_gutter;
+      }
 
-      font-size: $t_size_base * 3.125;
+      font-size: 312.5%;
       line-height: 1.2;
 
       span {
-        @include padding(horizontal, 1rem);
+        @include padding(horizontal, ($g_gutter * .5));
 
         display: inline-block;
         color: $c_white;
 
         &:first-child {
           .split--left &  { background-color: $c_gold; }
-          .split--right & { background-color: $c_black; }
+          .split--right & { background-color: $c_black; margin-right: $g_gutter; }
         }
         &:last-child {
-          .split--left &  { background-color: $c_black; }
+          .split--left &  { background-color: $c_black; margin-left: $g_gutter; }
           .split--right & { background-color: $c_red; }
         }
       }
     }
 
+    &-button {
+      align-self: center;
+
+      .split--left & {}
+      .split--right & {}
+    }
+
     &-tagline {
+      max-width: 6ch;
+
       position: absolute;
-      bottom: 2rem;
+      bottom: 0;
 
       color: $c_white;
+      line-height: 3;
 
-      .split--left & { left: 2rem; }
-      .split--right & { right: 2rem; text-align: right; }
+      .split--left & { left: $g_gutter; }
+      .split--right & { right: $g_gutter; text-align: right; }
     }
 }

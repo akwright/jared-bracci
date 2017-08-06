@@ -15,7 +15,7 @@
 	height: 100%;
 }
 
-.site-body {
+.site {
   font-family: $t_font_body;
   font-size: $t_size_base;
 }
@@ -30,6 +30,4 @@ h1, h2, h3 {
   line-height: 1.4;
 }
 
-h1 {
-  font-size: $t_size_base * 3.125;
-}
+h1 { font-size: 312.5% }

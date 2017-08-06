@@ -2,16 +2,17 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 
   position: absolute;
   top: 0; left: 0;
   width: 100%;
 
-  padding: 1rem;
+  padding: 1rem $g_gutter;
   z-index: 1;
 }
   .site-logo {
     color: $c_white;
+    font-size: 180%;
     text-decoration: none;
   }
