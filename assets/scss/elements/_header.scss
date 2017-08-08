@@ -12,7 +12,13 @@
   z-index: 1;
 }
   .site-logo {
+    position: relative;
     color: $c_white;
-    font-size: 180%;
+    font-size: 140%;
     text-decoration: none;
+    z-index: 2;
+
+    @media (min-width: 450px) {
+      font-size: 180%;
+    }
   }

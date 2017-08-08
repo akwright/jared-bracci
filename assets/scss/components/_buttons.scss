@@ -1,14 +1,21 @@
 .button {
-  padding: 1rem 2.5rem;
+  padding: .75rem 1.5rem;
 
   border-radius: $g_radius_pill;
-  font-size: 110%;
+  font-size: 90%;
   text-decoration: none;
   transition: transform .2s $g_easing;
 
-  &:hover,
-  &:focus  { transform: scale(1.05); }
-  &:active { transform: scale(.95); }
+  @media (min-width: 580px) {
+    padding: 1rem 2.5rem;
+    font-size: 110%;
+  }
+
+  @media (min-width: 700px) {
+    &:hover,
+    &:focus  { transform: scale(1.05); }
+    &:active { transform: scale(.95); }
+  }
 
   &--white {
     background-color: $c_white;

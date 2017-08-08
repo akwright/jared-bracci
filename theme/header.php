@@ -21,9 +21,6 @@
 	<?php // replace the no-js class with js on the html element ?>
 	<script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js')</script>
 
-	<?php // load the core js polyfills ?>
-	<script async defer src="<?php echo get_template_directory_uri(); ?>/assets/js/core.js"></script>
-
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( 'site-body' ); ?>>
@@ -35,6 +32,7 @@
 		<?php echo get_bloginfo(); ?>
 	</a>
 	<?php JAREDBRACCI_Menu::nav_menu( 'primary' ); ?>
+	<button class="site-mobile-trigger  js-mobile-nav">Menu</button>
 </header>
 
 <main class="site-content">

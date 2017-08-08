@@ -1,0 +1,56 @@
+.site-mobile-trigger {
+   display: block;
+   position: relative;
+
+   background-color: transparent;
+   border: 0;
+   color: $c_white;
+
+   @media (min-width: 700px) {
+    display: none;
+   }
+}
+
+
+// Specifically styled for mobile menu only
+@media (max-width: 699px) {
+  .menu {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba($c_navy, .8);
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.1);
+    transition: opacity .2s, transform .2s;
+
+    .menu__item {
+      display: block;
+      margin: 3rem 0;
+      text-align: center;
+    }
+
+      .menu__link {
+        font-size: 120%;
+      }
+
+    .is--open & {
+      opacity: 1;
+      pointer-events: all;
+      transform: scale(1);
+    }
+  }
+
+  .site-content {
+    transition: filter .2s ease;
+    .is--open & {
+      filter: blur(3px);
+    }
+  }
+}

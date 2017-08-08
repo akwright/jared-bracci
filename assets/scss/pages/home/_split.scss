@@ -1,8 +1,29 @@
 .split {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 50%;
+  flex: 1 1 100%;
+
+  &--left {
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  }
+
+  &--right {
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    margin-top: -32px;
+  }
+
+  @media (min-width: 580px) {
+    flex: 1 1 50%;
+
+    &--left {
+      clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    }
+
+    &--right {
+      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+      margin-left: -14%;
+      margin-top: 0;
+    }
+  }
 
   &-bgimage {
     display: flex;
@@ -22,28 +43,46 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     height: 100%;
     position: relative;
 
-    .split--left &  { align-items: flex-start; }
-    .split--right & { align-items: flex-end; }
+    -webkit-backface-visibility: hidden;
+
+    @media (min-width: 450px) {
+      .split--right & {
+        align-items: flex-end;
+      }
+    }
   }
 
     &-title {
+      padding-left: $g_gutter;
+      margin-bottom: 0;
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
 
-      .split--left  & {
-        align-items: flex-start;
-        padding-left: $g_gutter;
-      }
-      .split--right & {
-        align-items: flex-end;
-        padding-right: $g_gutter;
-      }
-
-      font-size: 312.5%;
+      font-size: 180%;
       line-height: 1.2;
+
+      @media (min-width: 450px) {
+        font-size: 240%;
+
+        .split--right & {
+          align-items: flex-end;
+          padding-right: $g_gutter;
+          padding-left: 0;
+        }
+      }
+
+      @media (min-width: 580px) {
+        margin-bottom: .83em;
+      }
+
+      @media (min-width: 700px) {
+        font-size: 312.5%;
+      }
 
       span {
         @include padding(horizontal, ($g_gutter * .5));
@@ -53,32 +92,55 @@
 
         &:first-child {
           .split--left &  { background-color: $c_gold; }
-          .split--right & { background-color: $c_black; margin-right: $g_gutter; }
+          .split--right & { background-color: $c_black; }
+
+          @media (min-width: 580px) {
+            .split--right & { margin-right: $g_gutter; }
+          }
         }
         &:last-child {
-          .split--left &  { background-color: $c_black; margin-left: $g_gutter; }
+          .split--left &  { background-color: $c_black; }
           .split--right & { background-color: $c_red; }
+
+          @media (min-width: 580px) {
+            .split--left &  { margin-left: $g_gutter; }
+          }
         }
       }
     }
 
-    &-button {
-      align-self: center;
+    &-tagline {
+      padding-left: $g_gutter;
+      color: $c_white;
+      text-shadow: 0 6px 10px rgba($c_black, .5);
 
-      .split--left & {}
-      .split--right & {}
+      @media (min-width: 450px) {
+        .split--right & { padding-right: $g_gutter; text-align: right; }
+      }
+
+      @media (min-width: 700px) {
+        max-width: 6ch;
+
+        position: absolute;
+        bottom: 0;
+
+        line-height: 3;
+
+        .split--left & { left: $g_gutter; padding-left: 0; }
+        .split--right & { right: $g_gutter; padding-right: 0; }
+      }
     }
 
-    &-tagline {
-      max-width: 6ch;
+    &-button {
+      margin-left: $g_gutter;
+      
+      @media (min-width: 450px) {
+        .split--right & { margin-right: $g_gutter; margin-left: 0; }
+      }
 
-      position: absolute;
-      bottom: 0;
-
-      color: $c_white;
-      line-height: 3;
-
-      .split--left & { left: $g_gutter; }
-      .split--right & { right: $g_gutter; text-align: right; }
+      @media (min-width: 700px) {
+        .split--left & { margin-left: $g_gutter; align-self: center; }
+        .split--right & { margin-right: $g_gutter; align-self: center; }
+      }
     }
 }

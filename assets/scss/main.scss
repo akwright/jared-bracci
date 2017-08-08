@@ -72,11 +72,19 @@
 
 
 /**
- * Your Custom Styles
+ * Site Elements
+ * ( - Structural containers and elements - )
  */
 @import "elements/site";
 @import "elements/header";
 @import "elements/menu";
+@import "elements/mobile-nav";
 
+
+
+/**
+ * Pages
+ * ( - Page specific styles and declarations - )
+ */
 @import "pages/home/base";
 @import "pages/home/split";
