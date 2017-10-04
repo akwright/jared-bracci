@@ -1,5 +1,7 @@
 .menu {
-  color: $c_white;
+  .home & {
+    color: $c_white;
+  }
 
   @media (min-width: 700px) {
     display: block;
@@ -20,6 +22,9 @@
   &__link {
     color: currentColor;
     text-decoration: none;
-    text-shadow: 0 4px 8px rgba($c_black, .2);
+
+    .home & {
+      text-shadow: 0 4px 8px rgba($c_black, .2);
+    }
   }
 }

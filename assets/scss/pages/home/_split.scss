@@ -12,16 +12,35 @@
   }
 
   @media (min-width: 580px) {
-    flex: 1 1 50%;
+    .home & {
+      flex: 1 1 50%;
+    }
+
+    .page-template-default & {
+      height: 100%;
+    }
 
     &--left {
-      clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+      .home & {
+        clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+      }
+      .page-template-default & {
+        flex: 0 1 400px;
+        clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
+      }
     }
 
     &--right {
-      clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
-      margin-left: -14%;
-      margin-top: 0;
+      .home & {
+        clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+        margin-left: -14%;
+        margin-top: 0;
+      }
+      .page-template-default & {
+        flex: 1 0 calc(100% - 300px);
+        clip-path: initial;
+        margin-top: 0;
+      }
     }
   }
 
