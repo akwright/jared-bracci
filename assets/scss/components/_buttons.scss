@@ -1,4 +1,5 @@
 .button {
+  display: inline-block;
   padding: .75rem 1.5rem;
 
   border-radius: $g_radius_pill;
@@ -22,7 +23,27 @@
     color: $c_black;
   }
 
+  &--red {
+    background: $c_red;
+    color: $c_white;
+    text-transform: uppercase;
+  }
+
+  &--gold {
+    background: $c_gold;
+    color: $c_white;
+    text-transform: uppercase;
+  }
+
   &--shadow {
     box-shadow: 0 13px 23px rgba($c_black, .2);
+  }
+}
+
+.button-group {
+  margin-top: 2rem;
+  
+  .button:first-child {
+    margin-right: 2rem;
   }
 }

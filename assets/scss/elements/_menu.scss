@@ -13,8 +13,34 @@
   }
 
   &__item {
+    position: relative;
+
     display: inline-block;
     margin-right: 2rem;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+
+      height: 3px;
+      width: 0;
+
+      background: $c_black;
+      opacity: 0;
+      transition: .3s ease;
+
+      .home & {
+        background: $c_white;
+      }
+    }
+
+    &:hover::after,
+    &--current::after {
+      opacity: 1;
+      width: 100%;
+    }
 
     &:last-child { margin-right: 0; }
   }

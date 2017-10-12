@@ -16,7 +16,8 @@
       flex: 1 1 50%;
     }
 
-    .page-template-default & {
+    .page-template-default &,
+    .page-template-tpl-about & {
       height: 100%;
     }
 
@@ -24,8 +25,12 @@
       .home & {
         clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
       }
-      .page-template-default & {
-        flex: 0 1 400px;
+      .page-template-default &,
+      .page-template-tpl-about & {
+        position: fixed;
+        top: 0; left: 0;
+        height: 100vh;
+        width: 300px;
         clip-path: polygon(0 0, 100% 0, 50% 100%, 0% 100%);
       }
     }
@@ -36,10 +41,12 @@
         margin-left: -14%;
         margin-top: 0;
       }
-      .page-template-default & {
-        flex: 1 0 calc(100% - 300px);
+      .page-template-default &,
+      .page-template-tpl-about & {
+        flex: 1 0 calc(100% - 400px);
         clip-path: initial;
         margin-top: 0;
+        margin-left: 350px;
       }
     }
   }
@@ -138,7 +145,7 @@
       }
 
       @media (min-width: 700px) {
-        max-width: 6ch;
+        max-width: 8ch;
 
         position: absolute;
         bottom: 0;

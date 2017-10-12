@@ -19,7 +19,7 @@
 
       <p class="split-tagline"><?php echo get_field( 'left_text' ); ?></p>
 
-      <a class="split-button  button button--white button--shadow" href="<?php echo home_url(); ?>/music/un-plugged/">Listen Now</a>
+      <a class="split-button  button button--white button--shadow" href="<?php echo home_url(); ?>/music/unplugged/">Listen Now</a>
     </article>
   </section>
 

@@ -9,6 +9,7 @@
   <section class="split  split--right">
     <h1 class="page-title">
       <?php the_title(); ?>
+      <?php jaredbracci_edit_link( get_the_ID() ); ?>
     </h1>
 
     <?php

@@ -6,3 +6,4 @@
  */
 
 import './scripts/app';
+import './scripts/tabs';

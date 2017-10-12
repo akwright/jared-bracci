@@ -7,13 +7,9 @@
   </section>
 
   <section class="split  split--right">
-    <h1 class="page-title">
-      <?php the_title(); ?>
-    </h1>
-
     <?php
       if ( have_posts() ) : while ( have_posts() ) : the_post();
-        the_content();
+        get_template_part( 'elements/page/content', 'page' );
       endwhile;
       else :
         _e( 'Sorry, no posts matched your criteria.', 'jaredbracci' );
