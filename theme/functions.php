@@ -61,6 +61,17 @@ if ( ! function_exists( 'theme_setup' ) ) {
 		// 	'height'      => 42,  // Example Height Size
 		// 	'flex-width'  => true,
 		// ) );
+
+
+		// Add custom mime type support
+
+		function my_mime_types($mime_types) {
+			$mime_types['svg'] = 'image/svg+xml';
+			$mime_types['aiff'] = 'audio/x-aiff';
+
+			return $mime_types;
+		}
+		add_filter('upload_mimes', my_mime_types, 1, 1);
 		
 
 		// Register navigation menus for theme
