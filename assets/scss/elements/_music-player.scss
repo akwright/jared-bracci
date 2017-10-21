@@ -1,0 +1,14 @@
+.post-content .wp-playlist {
+  padding: 0;
+  
+  background: transparent;
+  border: 0;
+  
+  &-item {
+    margin-bottom: 1rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    
+    border: 0;
+  }
+}
