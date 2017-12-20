@@ -35,11 +35,13 @@
         background: $c_white;
       }
     }
-
-    &:hover::after,
-    &--current::after {
-      opacity: 1;
-      width: 100%;
+    
+    @media (min-width: 700px) {
+      &:hover::after,
+      &--current::after {
+        opacity: 1;
+        width: 100%;
+      }
     }
 
     &:last-child { margin-right: 0; }
