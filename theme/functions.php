@@ -161,6 +161,10 @@ if ( ! function_exists( 'theme_scripts' ) ) {
 		$theme_dir = get_template_directory_uri();
 
 		wp_enqueue_script( 'main', "$theme_dir/assets/js/main.js", array(), null, true );
+		
+		if ( is_page_template( 'templates/tpl-about.php' ) ) {
+			wp_enqueue_script( 'tab', "$theme_dir/assets/js/tab.js", array(), null, true );
+		}
 	}
 }
 

@@ -5,10 +5,48 @@
   border: 0;
   
   &-item {
-    margin-bottom: 1rem;
-    padding-top: .5rem;
-    padding-bottom: .5rem;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
     
+    margin-bottom: .25rem;
+    padding: .5rem 1rem;
+    
+    background: $c_black;
     border: 0;
+    color: $c_white;
+    
+    &-title {
+      color: $c_white;
+    }
+    
+    &-length {
+      position: static;
+    }
   }
+}
+
+.wp-playlist.wp-playlist-light {
+  .wp-playlist-caption {
+    color: $c_white;
+  }
+  .wp-playlist-playing {
+    background: $c_gold;
+    color: $c_white;
+    font-weight: normal;
+  }
+}
+
+.wp-playlist .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+.wp-playlist .mejs-controls .mejs-time-rail .mejs-time-loaded {
+  background: $c_gold;
+}
+
+.wp-playlist .mejs-controls .mejs-time-rail .mejs-time-current {
+  background: lighten($c_gold, 5%);
+}
+
+.wp-playlist-current-item {
+  display: none;
 }
