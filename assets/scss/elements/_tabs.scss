@@ -20,10 +20,13 @@
     z-index: -1;
     
     @media (min-width: 701px) {
-      display: block;
       left: -350px;
       width: 100vw;
     }
+  }
+  
+  @media (min-width: 701px) {
+    display: block;
   }
 
   li {
