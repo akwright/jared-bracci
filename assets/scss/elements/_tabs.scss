@@ -1,4 +1,7 @@
 .tablist {
+  display: flex;
+  justify-content: center;
+  
   list-style: none;
   margin: 2rem 0 0;
   padding: 0;
@@ -9,12 +12,18 @@
     
     position: absolute;
     bottom: -10px;
-    left: -350px;
+    left: -1rem;
     height: 1px;
-    width: 100vw;
+    width: calc(100vw + 1rem);
 
     background: darken($c_gray-light, 30%);;
     z-index: -1;
+    
+    @media (min-width: 701px) {
+      display: block;
+      left: -350px;
+      width: 100vw;
+    }
   }
 
   li {
@@ -27,7 +36,11 @@
     text-transform: uppercase;
 
     &:first-child {
-      margin-right: 5rem;
+      margin-right: 3rem;
+      
+      @media (min-width: 701px) {
+        margin-right: 5rem;
+      }
     }
 
     &::after {
@@ -67,9 +80,14 @@
   }
 
   img {
-    position: absolute;
-    top: -4rem;
-    right: 1rem;
+    display: block;
+    margin: auto;
+    
+    @media (min-width: 701px) {
+      position: absolute;
+      top: -4rem;
+      right: 1rem;
+    }
   }
 }
 

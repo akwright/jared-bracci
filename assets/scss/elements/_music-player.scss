@@ -47,6 +47,10 @@
   background: lighten($c_gold, 5%);
 }
 
+.wp-playlist .mejs-container {
+  width: 100% !important;
+}
+
 .wp-playlist-current-item {
   display: none;
 }

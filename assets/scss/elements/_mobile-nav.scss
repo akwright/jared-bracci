@@ -6,7 +6,8 @@
    border: 0;
    color: $c_black;
    
-   .home & {
+   .home &,
+   .is--open & {
      color: $c_white;
    }
 
@@ -41,6 +42,7 @@
     }
 
       .menu__link {
+        color: $c_white;
         font-size: 120%;
       }
 

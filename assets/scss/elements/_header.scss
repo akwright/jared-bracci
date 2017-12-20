@@ -13,12 +13,20 @@
 }
   .site-logo {
     position: relative;
-    color: $c_white;
+    color: $c_black;
     font-size: 140%;
     text-decoration: none;
     z-index: 2;
+    
+    .home & {
+      color: $c_white;
+    }
 
     @media (min-width: 450px) {
       font-size: 180%;
+    }
+    
+    @media (min-width: 701px) {
+      color: $c_white;
     }
   }

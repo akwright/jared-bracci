@@ -4,14 +4,29 @@
 
   &--left {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    
+    @media (max-width: 700px) {
+      .page-template-default &,
+      .page-template-tpl-about &, {
+        display: none;
+      }
+    }
   }
 
   &--right {
     clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
     margin-top: -32px;
+    
+    .page-template-default &,
+    .page-template-tpl-about &, {
+      @media (max-width: 700px) {
+        clip-path: none;
+        padding: 0 1rem;
+      }
+    }
   }
 
-  @media (min-width: 580px) {
+  @media (min-width: 701px) {
     .home & {
       flex: 1 1 50%;
     }
@@ -47,6 +62,7 @@
         clip-path: initial;
         margin-top: 0;
         margin-left: 350px;
+        max-width: calc(100% - 400px);
       }
     }
   }

@@ -1,7 +1,10 @@
 .post {
 
   &-content {
-    max-width: 50ch;
     margin-bottom: 5rem;
+    
+    @media (min-width: 701px) {
+      max-width: 50ch;
+    }
   }
 }
