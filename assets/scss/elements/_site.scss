@@ -27,6 +27,10 @@
     @media (min-width: 701px) {
       min-height: 100%;
     }
+    
+    a:not(.button) {
+      color: $c_gold;
+    }
   }
 
   .page-title {

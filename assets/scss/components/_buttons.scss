@@ -47,32 +47,3 @@
     margin-right: 2rem;
   }
 }
-
-a:not(.button):not(.site-logo) {
-  position: relative;
-  color: $c_navy;
-  
-  @media (min-width: 701px) {
-    text-decoration: none;
-    
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      
-      background-color: $c_navy;
-      
-      opacity: 0;
-      transition: .3s ease;
-      
-    }
-    
-    &:hover::after {
-      opacity: 1;
-      width: 100%;
-    }
-  }
-}
