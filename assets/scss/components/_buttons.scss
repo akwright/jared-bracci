@@ -48,7 +48,7 @@
   }
 }
 
-a {
+a:not(.button) {
   position: relative;
   color: $c_navy;
   
