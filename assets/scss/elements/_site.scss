@@ -21,10 +21,12 @@
 }
 
   .site-content {
-    height: 100%;
     position: relative;
     display: flex;
-    overflow-x: hidden;
+    
+    @media (min-width: 701px) {
+      min-height: 100%;
+    }
   }
 
   .page-title {
@@ -46,8 +48,10 @@
     
     @media (min-width: 701px) {
       font-size: 1250%;
+      line-height: .75;
       letter-spacing: -1.7rem;
       text-align: left;
+      word-wrap: break-word;
     }
   }
   
