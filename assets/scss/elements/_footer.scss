@@ -8,6 +8,12 @@
     padding-left: 350px;
   }
   
+  .home & {
+    @media (min-width: 701px) {
+      padding-left: 2rem;
+    }
+  }
+  
   @media (min-width: 800px) {    
     display: flex;
     flex-flow: row wrap;
