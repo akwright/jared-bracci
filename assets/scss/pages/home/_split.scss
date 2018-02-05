@@ -153,7 +153,9 @@
 
     &-tagline {
       padding-left: $g_gutter;
+      
       color: $c_white;
+      font-weight: 100;
       text-shadow: 0 6px 10px rgba($c_black, .5);
 
       @media (min-width: 450px) {
@@ -161,8 +163,6 @@
       }
 
       @media (min-width: 700px) {
-        max-width: 8ch;
-
         position: absolute;
         bottom: 0;
 
