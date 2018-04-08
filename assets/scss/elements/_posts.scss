@@ -5,7 +5,10 @@
     
     @media (min-width: 701px) {
       margin-bottom: 5rem;
-      max-width: 50ch;
+      
+      p {
+        max-width: 50ch;
+      }
     }
     
     iframe {

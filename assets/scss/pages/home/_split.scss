@@ -5,7 +5,7 @@
   &--left {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
     
-    @media (max-width: 700px) {
+    @media (max-width: 820px) {
       .page-template-default &,
       .page-template-tpl-about &, {
         display: none;
@@ -19,14 +19,14 @@
     
     .page-template-default &,
     .page-template-tpl-about &, {
-      @media (max-width: 700px) {
+      @media (max-width: 820px) {
         clip-path: none;
         padding: 0 1rem;
       }
     }
   }
 
-  @media (min-width: 701px) {
+  @media (min-width: 821px) {
     .home & {
       flex: 1 1 50%;
     }
@@ -122,7 +122,7 @@
         margin-bottom: .83em;
       }
 
-      @media (min-width: 700px) {
+      @media (min-width: 820px) {
         font-size: 312.5%;
       }
 
@@ -162,7 +162,7 @@
         .split--right & { padding-right: $g_gutter; text-align: right; }
       }
 
-      @media (min-width: 700px) {
+      @media (min-width: 820px) {
         position: absolute;
         bottom: 0;
 
@@ -180,7 +180,7 @@
         .split--right & { margin-right: $g_gutter; margin-left: 0; }
       }
 
-      @media (min-width: 700px) {
+      @media (min-width: 820px) {
         .split--left & { margin-left: $g_gutter; align-self: center; }
         .split--right & { margin-right: $g_gutter; align-self: center; }
       }

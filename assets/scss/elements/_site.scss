@@ -34,8 +34,8 @@
   }
 
   .page-title {
-    margin-top: 6rem;
-    margin-bottom: 0;
+    margin-top: 7rem;
+    margin-bottom: 3rem;
 
     color: $c_gray-light;
     font-size: 340%;
@@ -44,18 +44,27 @@
     text-align: center;
     text-transform: uppercase;
     
-    @media (min-width: 600px) {
-      margin-top: 0;
-      
-      font-size: 1000%;
+    @media (min-width: 600px) {      
+      font-size: 500%;
+      margin-top: 5rem;
+      margin-bottom: 2.5rem;
     }
     
     @media (min-width: 701px) {
-      font-size: 1250%;
-      line-height: .75;
-      letter-spacing: -1.7rem;
+      font-size: 750%;
+      line-height: 1;
+      letter-spacing: .5rem;
       text-align: left;
       word-wrap: break-word;
+    }
+    
+    @media (min-width: 1000px) {
+      letter-spacing: 2.3rem;
+    }
+    
+    @media (min-width: 1400px) {
+      font-size: 1000%;
+      margin-bottom: 5rem;
     }
   }
   

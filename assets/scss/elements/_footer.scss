@@ -4,12 +4,12 @@
   border-top: 1px solid $c_gray-light;
   text-align: center;
   
-  @media (min-width: 701px) {
+  @media (min-width: 821px) {
     padding-left: 350px;
   }
   
   .home & {
-    @media (min-width: 701px) {
+    @media (min-width: 821px) {
       padding-left: 2rem;
     }
   }
@@ -25,7 +25,7 @@
     margin-top: 0;
     margin-bottom: .5rem;
     
-    @media (min-width: 701px) {
+    @media (min-width: 821px) {
       margin-bottom: 0;
     }
   }
@@ -35,7 +35,7 @@
     padding: 0;
     list-style: none;
     
-    @media (min-width: 701px) {
+    @media (min-width: 821px) {
       margin-bottom: 0;
     }
     

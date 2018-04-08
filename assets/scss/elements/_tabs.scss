@@ -19,13 +19,13 @@
     background: darken($c_gray-light, 30%);;
     z-index: -1;
     
-    @media (min-width: 701px) {
+    @media (min-width: 821px) {
       left: -350px;
       width: 100vw;
     }
   }
   
-  @media (min-width: 701px) {
+  @media (min-width: 821px) {
     display: block;
   }
 
@@ -41,7 +41,7 @@
     &:first-child {
       margin-right: 3rem;
       
-      @media (min-width: 701px) {
+      @media (min-width: 821px) {
         margin-right: 5rem;
       }
     }
@@ -86,7 +86,7 @@
     display: block;
     margin: auto;
     
-    @media (min-width: 701px) {
+    @media (min-width: 821px) {
       position: absolute;
       bottom: -2rem;
       right: 1rem;
