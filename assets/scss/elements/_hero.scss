@@ -1,0 +1,32 @@
+.hero {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    
+    background: rgba(53,74,95,.6);
+  }
+  
+  &-content {
+    position: relative;
+    margin-top: 5rem;
+    max-width: 60ch;
+    color: $c_white;
+    text-align: center;
+  }
+  
+  &-title {
+    margin-bottom: 10rem;
+    color: $c_white;
+  }
+}
