@@ -6,6 +6,10 @@
   
   @media (min-width: 821px) {
     padding-left: 350px;
+    
+    .error404 & {
+      padding-left: 2rem;
+    }
   }
   
   .home & {
