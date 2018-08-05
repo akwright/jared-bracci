@@ -1,10 +1,3 @@
-<?php
-/**
- * Header file common to all
- * templates
- *
- */
-?>
 <!doctype html>
 <html class="site no-js" <?php language_attributes(); ?>>
 <head>
@@ -17,14 +10,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	
 	<title><?php wp_title(); ?></title>
-
-	<?php // replace the no-js class with js on the html element ?>
 	<script>document.documentElement.className=document.documentElement.className.replace(/\bno-js\b/,'js')</script>
 
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class( 'site-body' ); ?>>
-<?php // <body> closes in footer.php ?>
 
 
 <header class="site-header" role="header">

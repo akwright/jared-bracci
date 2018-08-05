@@ -149,6 +149,13 @@ if ( ! function_exists( 'theme_styles' ) ) {
 	}
 }
 
+if ( ! function_exists( 'theme_fonts' ) ) {
+  function theme_fonts() {
+     wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,600', false );
+  }
+  add_action( 'wp_enqueue_scripts', 'theme_fonts' );
+}
+
 
 /**
  * Register and/or Enqueue
@@ -223,3 +230,8 @@ function jaredbracci_edit_link() {
 	return $link;
 }
 endif;
+
+/**
+ * Custom template tags for posts.
+ */
+require get_parent_theme_file_path( '/includes/template-tags.php' );

@@ -1,13 +1,4 @@
-<?php
-/**
- * Footer file common to all
- * templates
- *
- */
-?>
-
 </main>
-<?php // common footer content goes here ?>
 
 <footer class="site-footer">
   <p class="copyright">&copy; <?php echo date("Y"); ?> Jared Bracci</p>
@@ -19,7 +10,5 @@
 </footer>
 
 <?php wp_footer(); ?>
-
-<?php // </body> opens in header.php ?>
 </body>
 </html>

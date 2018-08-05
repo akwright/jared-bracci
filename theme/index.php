@@ -1,55 +1,43 @@
-<?php
-/**
- * Read up on the WP Template Hierarchy for
- * when this file is used
- *
- */
-?>
 <?php get_header(); ?>
 
-	<article class="hero">
-		<div class="hero__content">
+<section class="split  split--left  split--left-child">
+  <figure class="split-bgimage">
+    <?php
+      $post_id = false;
+      if ( is_home() ) {
+        $post_id = 156;
+      }
+    ?>
+    <img src="<?php echo get_field( 'page_background_image', $post_id ); ?>" alt="Left split background">
+  </figure>
+</section>
 
-			<header>
-				<h1 class="hero__title">
-					The Mozaik WordPress Theme Starter
-				</h1>
-			</header>
+<section class="split  split--right">
+	<?php if ( is_home() && ! is_front_page() ) : ?>
+    <h1 class="page-title"><?php single_post_title(); ?></h1>
+	<?php else : ?>
+		<h2 class="page-title"><?php _e( 'Posts', 'jaredbracci' ); ?></h2>
+  <?php endif; ?>
 
-			<p>
-				Build tools included! :)
-			</p>
+  <?php
+  if ( have_posts() ) :
 
-			<p>
-				<strong>Happy Hacking!</strong>
-			</p>
+    /* Start the Loop */
+    while ( have_posts() ) :
+      the_post();
 
-			<footer>
+      get_template_part( 'elements/post/content', get_post_format() );
 
-				<a class="hero__cta"
-				   target="_blank"
-				   href="https://github.com/MozaikAgency/wp-theme-starter">
-					check out the README
-				</a>
+    endwhile;
 
-				<?php get_template_part( 'elements/github' ); ?>
+    JAREDBRACCI_Pagination::pagination();
 
-				<div class="hero__icon">
-					<?php JAREDBRACCI_SVG::svg( 'medal' ); ?>
-				</div>
+  else :
 
-				<div class="hero__credits">
-					<p>
-						Background image of Everest courtesy of <a target="_blank" href="https://unsplash.it/">Unsplash It.</a>
-					</p>
-					<p>
-						SVG medal created by Creative Stall, from the <a target="_blank" href="https://thenounproject.com/creativestall/">Noun Project.</a>
-					</p>
-				</div>
+    get_template_part( 'elements/post/content', 'none' );
 
-			</footer>
-
-		</div>
-	</article>
+  endif;
+  ?>
+</section>
 
 <?php get_footer(); ?>

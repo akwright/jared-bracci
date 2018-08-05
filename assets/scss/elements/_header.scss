@@ -10,6 +10,18 @@
 
   padding: 1rem $g_gutter;
   z-index: 1;
+  
+  &--home {
+    background: transparent !important;
+    position: absolute !important;
+    padding: 1rem $g_gutter !important;
+    top: 0; left: 0;
+    width: 100%;
+    
+    .brz-ed & {
+      position: static !important;
+    }
+  }
 }
   .site-logo {
     position: relative;

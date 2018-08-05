@@ -28,6 +28,8 @@
   .copyright {
     margin-top: 0;
     margin-bottom: .5rem;
+    font-size: 87.5%;
+    font-weight: 400;
     
     @media (min-width: 821px) {
       margin-bottom: 0;
@@ -46,12 +48,33 @@
     li {
       display: inline-block;
       
-      margin-left: 1rem;
+      margin-left: 1.5rem;
       
       &:first-child { margin-left: 0; }
     }
     
     a {
-      color: $c_gold;
+      color: $c_gold_light;
+      font-size: 87.5%;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 1px;
+      transition: color .3s ease;
+      
+      &:hover {
+        color: rgba($c_gold_light, .4);
+      }
+    }
+  }
+  
+  .footer-link-item {
+    
+    .brz-wrapper-clone__item {
+      margin-left: 1.5rem;
+    
+      &:first-child { margin-left: 0; }
+    
+      a,
+      a:hover { text-decoration: underline !important; }
     }
   }
