@@ -235,3 +235,12 @@ endif;
  * Custom template tags for posts.
  */
 require get_parent_theme_file_path( '/includes/template-tags.php' );
+
+
+/**
+ * Custom shortcodes.
+ */
+add_shortcode( 'footer_copyright', 'create_footer_copyright' );
+function create_footer_copyright( ) {
+  return '&copy; ' . date("Y") . ' Jared Bracci';
+}
