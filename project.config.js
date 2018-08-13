@@ -23,9 +23,9 @@ module.exports = {
 	name: 'jared_bracci',
 	prettyName: 'Jared Bracci',
 
-	description: 'The 2017 theme for {jaredbracci.com}. Built by Alex Wright',
-	version: '0.1.0',
-	author: 'Alex Wright <hello@akwright.com>',
-	authorURI: 'http://akwright.com',
-	license: 'GPLv2 or later'
+	description: 'Custom WordPress theme for jaredbracci.com. Built by Alex Wright of Three Fat Arrows',
+	version: '1.41',
+	author: 'Alex Wright <alex@threefatarrows.com>',
+	authorURI: 'https://threefatarrows.com',
+	license: 'MIT'
 };
