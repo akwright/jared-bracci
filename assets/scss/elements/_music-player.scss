@@ -1,4 +1,4 @@
-.post-content .wp-playlist {
+.page .wp-playlist {
   padding: 0;
   
   background: transparent;
@@ -13,28 +13,39 @@
     margin-bottom: .25rem;
     padding: .5rem 1rem;
     
-    background: $c_black;
-    border: 0;
-    color: $c_white;
+    background: $c_white;
+    border: 1px solid $c_gray-light;
+    color: $c_black;
+    
+    font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     
     &-title {
-      color: $c_white;
+      color: $c_black;
     }
     
     &-length {
       position: static;
+    }
+    
+    &:last-child {
+      border-bottom: 1px solid $c_gray-light;
     }
   }
 }
 
 .wp-playlist.wp-playlist-light {
   .wp-playlist-caption {
-    color: $c_white;
+    color: $c_black;
   }
   .wp-playlist-playing {
     background: $c_gold;
     color: $c_white;
     font-weight: normal;
+    
+    .wp-playlist-caption,
+    .wp-playlist-item-title {
+      color: $c_white;
+    }
   }
 }
 
@@ -44,7 +55,7 @@
 }
 
 .wp-playlist .mejs-controls .mejs-time-rail .mejs-time-current {
-  background: lighten($c_gold, 5%);
+  background: lighten($c_gold, 15%);
 }
 
 .wp-playlist .mejs-container {
