@@ -58,20 +58,22 @@
       border-bottom: 1px solid $c_gray-light;
     }
     
-    &:hover {
-      box-shadow: 0 10px 25px rgba($c_black, .05), 0 24px 48px rgba($c_black, .12);
-      transform: scale(1.01);
-      z-index: 1;
-      
-      a::after {
-        width: 100%;
-        opacity: 1;
+    @media (min-width: 960px) {
+      &:hover {
+        box-shadow: 0 10px 25px rgba($c_black, .05), 0 24px 48px rgba($c_black, .12);
+        transform: scale(1.01);
+        z-index: 1;
+        
+        a::after {
+          width: 100%;
+          opacity: 1;
+        }
       }
-    }
-    &:active {
-      background: darken($c_gray-light, 10%);
-      box-shadow: 0 4px 15px rgba($c_black, .1);
-      transform: scale(.99);
+      &:active {
+        background: darken($c_gray-light, 10%);
+        box-shadow: 0 4px 15px rgba($c_black, .1);
+        transform: scale(.99);
+      }
     }
   }
 }
