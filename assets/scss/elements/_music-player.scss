@@ -19,6 +19,10 @@
     
     font-family: 'Montserrat', Helvetica, Arial, sans-serif;
     
+    box-shadow: 0 1px 1px rgba($c_black, .12), 0 4px 10px rgba($c_black, .06);
+    
+    transition: .2s ease;
+    
     &-title {
       color: $c_black;
     }
@@ -27,8 +31,47 @@
       position: static;
     }
     
+    a {
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 0px;
+        bottom: 0px;
+        left: 0;
+        
+        background-color: $c_black;
+        opacity: 0;
+        
+        transition: opacity .2s ease, width .2s ease;
+      }
+      
+      &:focus::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+    
     &:last-child {
       border-bottom: 1px solid $c_gray-light;
+    }
+    
+    &:hover {
+      box-shadow: 0 10px 25px rgba($c_black, .05), 0 24px 48px rgba($c_black, .12);
+      transform: scale(1.01);
+      z-index: 1;
+      
+      a::after {
+        width: 100%;
+        opacity: 1;
+      }
+    }
+    &:active {
+      background: darken($c_gray-light, 10%);
+      box-shadow: 0 4px 15px rgba($c_black, .1);
+      transform: scale(.99);
     }
   }
 }
