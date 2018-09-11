@@ -151,7 +151,7 @@ if ( ! function_exists( 'theme_styles' ) ) {
 
 if ( ! function_exists( 'theme_fonts' ) ) {
   function theme_fonts() {
-     wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,600', false );
+     wp_enqueue_style( 'custom-google-fonts', 'https://fonts.googleapis.com/css?family=Montserrat:400,600,700', false );
   }
   add_action( 'wp_enqueue_scripts', 'theme_fonts' );
 }

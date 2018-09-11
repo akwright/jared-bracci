@@ -1,13 +1,16 @@
-.site-header--home .menu {
-  .home & {
-    color: $c_white;
-  }
+//.site-header--home .menu {
+.site-header .menu,
+.brz .brz-wp-shortcode__menu .menu {
+  // .home & {
+  //   color: $c_white;
+  // }
   
   @media (min-width: 700px) {
     display: block;
     
     &:hover {
-      .menu-item a {
+      .menu-item a, 
+      .menu__item a {
         color: rgba($c_white, .4) !important;
         
         &:hover { color: $c_white !important; }
@@ -25,7 +28,11 @@
     position: relative;
 
     display: inline-block;
-    margin-right: 1.5rem;
+    margin-right: 2rem;
+    
+    line-height: 1;
+    letter-spacing: 0;
+    text-decoration: none;
 
     &::after {
       content: '';
@@ -39,10 +46,6 @@
       background: $c_white;
       opacity: 0;
       transition: .3s ease;
-
-      .home & {
-        background: $c_white;
-      }
     }
     
     @media (min-width: 700px) {
@@ -58,12 +61,12 @@
 
   &__link,
   &-item a {
-    color: currentColor;
+    color: $c_white;
     text-decoration: none;
     transition: color .3s ease;
 
-    .home & {
-      text-shadow: 0 4px 8px rgba($c_black, .2);
-    }
+    // .home & {
+    //   text-shadow: 0 4px 8px rgba($c_black, .2);
+    // }
   }
 }
